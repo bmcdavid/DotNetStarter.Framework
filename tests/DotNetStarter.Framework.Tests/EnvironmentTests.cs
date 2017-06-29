@@ -8,7 +8,7 @@ namespace DotNetStarter.Framework.Tests
     [TestClass]
     public class EnvironmentTests
     {
-        Import<IEnvironmentSettings> Environment;
+        private Import<IEnvironmentSettings> Environment;
 
         [TestMethod]
         public void ShouldBeTestEnvironment()

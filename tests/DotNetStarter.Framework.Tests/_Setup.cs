@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DotNetStarter.Abstractions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Reflection;
 
 namespace DotNetStarter.Framework.Tests

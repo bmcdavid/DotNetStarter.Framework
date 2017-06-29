@@ -9,14 +9,17 @@
         /// Removed
         /// </summary>
         Removed = 1,
+
         /// <summary>
         /// Expired
         /// </summary>
         Expired = 2,
+
         /// <summary>
         /// Underused
         /// </summary>
         Underused = 3,
+
         /// <summary>
         /// Dependency changed
         /// </summary>

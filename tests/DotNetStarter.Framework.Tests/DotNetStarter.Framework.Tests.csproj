@@ -8,6 +8,7 @@
     <PackageReference Include="DotNetStarter" Version="1.0.1" />
     <PackageReference Include="DotNetStarter.Abstractions" Version="1.0.0" />
     <PackageReference Include="DotNetStarter.DryIoc" Version="1.0.0" />
+    <PackageReference Include="DryIoc.dll" Version="2.11.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
@@ -20,6 +21,17 @@
     <AutoGenerateBindingRedirects Condition="'$(AutoGenerateBindingRedirects)'==''">true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType Condition="'$(GenerateBindingRedirectsOutputType)'==''">true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
+
+  <ItemGroup Condition="$(TargetFramework) == 'netcoreapp1.1'">
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.2" />
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
+  </ItemGroup>
 
 
 </Project>

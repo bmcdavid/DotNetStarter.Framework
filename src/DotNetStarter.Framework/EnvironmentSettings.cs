@@ -9,7 +9,6 @@ namespace DotNetStarter.Framework
     [Register(typeof(IEnvironmentSettings), LifeTime.Singleton)]
     public class EnvironmentSettings : IEnvironmentSettings
     {
-
 #if NETSTANDARD1_3
         /// <summary>
         /// Constructor for netstandard
@@ -22,6 +21,7 @@ namespace DotNetStarter.Framework
             ApplicationBasePath = System.AppContext.BaseDirectory;
         }
 #else
+
         /// <summary>
         /// Constructor for netframework
         /// </summary>
@@ -33,6 +33,7 @@ namespace DotNetStarter.Framework
             ContentRootPath = WebRootPath;
             EnvironmentName = System.Configuration.ConfigurationManager.AppSettings[$"{typeof(IEnvironmentSettings).FullName}.{nameof(IEnvironmentSettings.EnvironmentName)}"]?.ToString() ?? "";
         }
+
 #endif
 
         /// <summary>

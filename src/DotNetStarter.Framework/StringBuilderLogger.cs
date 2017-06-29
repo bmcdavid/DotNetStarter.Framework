@@ -6,7 +6,7 @@ using System.Text;
 namespace DotNetStarter.Framework
 {
     /// <summary>
-    /// ILogger using a string builder, this implementation should be swapped in production environments 
+    /// ILogger using a string builder, this implementation should be swapped in production environments
     /// </summary>
     [Register(typeof(ILogger), LifeTime.Singleton)]
     public class StringBuilderLogger : ILogger

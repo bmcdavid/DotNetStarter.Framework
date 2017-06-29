@@ -9,14 +9,17 @@
         /// Information
         /// </summary>
         Information = 0,
+
         /// <summary>
         /// Success
         /// </summary>
         Success = 100,
+
         /// <summary>
         /// Error
         /// </summary>
         Error = 200,
+
         /// <summary>
         /// Warning
         /// </summary>

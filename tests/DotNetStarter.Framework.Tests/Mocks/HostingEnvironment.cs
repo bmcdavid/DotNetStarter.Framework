@@ -18,4 +18,5 @@ namespace DotNetStarter.Framework.Tests.Mocks
         public IFileProvider ContentRootFileProvider { get; set; }
     }
 }
+
 #endif
