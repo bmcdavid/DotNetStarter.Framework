@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8C9BF084
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetStarter.Framework.Tests", "tests\DotNetStarter.Framework.Tests\DotNetStarter.Framework.Tests.csproj", "{FBEC920C-CCC0-4557-B2B5-D940D8EA3BFF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetStarter.Framework.Tests.net35", "tests\DotNetStarter.Framework.Tests\DotNetStarter.Framework.Tests.net35.csproj", "{F7623A0B-A1D0-40FA-BE47-9835A47E497A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetStarter.Framework.Tests.net40", "tests\DotNetStarter.Framework.Tests\DotNetStarter.Framework.Tests.net40.csproj", "{6B395C04-EBC0-4582-B558-2AFC44691964}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +33,21 @@ Global
 		{FBEC920C-CCC0-4557-B2B5-D940D8EA3BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBEC920C-CCC0-4557-B2B5-D940D8EA3BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBEC920C-CCC0-4557-B2B5-D940D8EA3BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7623A0B-A1D0-40FA-BE47-9835A47E497A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7623A0B-A1D0-40FA-BE47-9835A47E497A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7623A0B-A1D0-40FA-BE47-9835A47E497A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7623A0B-A1D0-40FA-BE47-9835A47E497A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B395C04-EBC0-4582-B558-2AFC44691964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B395C04-EBC0-4582-B558-2AFC44691964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B395C04-EBC0-4582-B558-2AFC44691964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B395C04-EBC0-4582-B558-2AFC44691964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FBEC920C-CCC0-4557-B2B5-D940D8EA3BFF} = {8C9BF084-446E-4C8A-81E4-644F258FB7E4}
+		{F7623A0B-A1D0-40FA-BE47-9835A47E497A} = {8C9BF084-446E-4C8A-81E4-644F258FB7E4}
+		{6B395C04-EBC0-4582-B558-2AFC44691964} = {8C9BF084-446E-4C8A-81E4-644F258FB7E4}
 	EndGlobalSection
 EndGlobal
