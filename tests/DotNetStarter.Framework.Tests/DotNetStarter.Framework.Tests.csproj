@@ -4,7 +4,7 @@
     <TargetFrameworks>netcoreapp1.1;net45</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'netcoreapp1.1'">netstandard1.3</ReferringTargetFrameworkForProjectReferences>
-    <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net46'">net45</ReferringTargetFrameworkForProjectReferences>
+    <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net45'">net45</ReferringTargetFrameworkForProjectReferences>
     <OutDir>bin\$(Configuration)\$(ReferringTargetFrameworkForProjectReferences)</OutDir>
   </PropertyGroup>
 
