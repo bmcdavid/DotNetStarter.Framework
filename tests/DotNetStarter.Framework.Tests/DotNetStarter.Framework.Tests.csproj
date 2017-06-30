@@ -1,11 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;net45</TargetFrameworks>
+    <TargetFrameworks>netcoreapp1.1;net45;net451;net46</TargetFrameworks>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'netcoreapp1.1'">netstandard1.3</ReferringTargetFrameworkForProjectReferences>
-    <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net45'">net45</ReferringTargetFrameworkForProjectReferences>
+    <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net46'">net45</ReferringTargetFrameworkForProjectReferences>
+    <ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net451'">net40</ReferringTargetFrameworkForProjectReferences>
+    <!--
+      Using net35 results in below using the command: dotnet test
+      C:\Program Files\dotnet\sdk\1.0.4\Microsoft.Common.CurrentVersion.targets(1111,5): error MSB3644: The reference assemblies for framework ".NETFramework,Version=v3.5" were not found. To resolve this, install the SDK or Targeting Pack for this framework version or retarget your application to a version of the framework for which you have the SDK or Targeting Pack installed. Note that assemblies will be resolved from the Global Assembly Cache (GAC) and will be used in place of reference assemblies. Therefore your assembly may not be correctly targeted for the framework you intend. [C:\_Web\projects\DotNetStarter.Framework\src\DotNetStarter.Framework\DotNetStarter.Framework.csproj]
+    -->
+    <!--<ReferringTargetFrameworkForProjectReferences Condition="'$(TargetFramework)' == 'net45'">net35</ReferringTargetFrameworkForProjectReferences>-->
     <OutDir>bin\$(Configuration)\$(ReferringTargetFrameworkForProjectReferences)</OutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' != 'netcoreapp1.1'">
+    <AutoGenerateBindingRedirects Condition="'$(AutoGenerateBindingRedirects)'==''">true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType Condition="'$(GenerateBindingRedirectsOutputType)'==''">true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,15 +27,9 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
     <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
-
     <ProjectReference Include="..\..\src\DotNetStarter.Framework\DotNetStarter.Framework.csproj" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net45'">
-    <AutoGenerateBindingRedirects Condition="'$(AutoGenerateBindingRedirects)'==''">true</AutoGenerateBindingRedirects>
-    <GenerateBindingRedirectsOutputType Condition="'$(GenerateBindingRedirectsOutputType)'==''">true</GenerateBindingRedirectsOutputType>
-  </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework) == 'netcoreapp1.1'">
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.0.1" />
@@ -36,6 +41,4 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
     <PackageReference Include="System.Reflection.Extensions" Version="4.3.0" />
   </ItemGroup>
-
-
 </Project>
